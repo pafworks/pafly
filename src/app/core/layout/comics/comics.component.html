@@ -1,0 +1,35 @@
+<div class="card text-center text-dark bg-info fart">
+  
+    <div class="card-header">
+      <h3 class="card-title">Pincocchio and Foot Comics</h3>
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item" *ngFor="let thumb of coverThumbs">
+          <a class="nav-link active" (click)="getComic(thumb)"> <img [src]="thumb" style="display: block; width:100%"> </a>
+        </li>
+      </ul>
+      <!-- <p-carousel headerText="Pick Your Favorite Pinocchio and FooT Comic" numVisible="8" [value]="coverThumbs"> -->
+        <!-- <ng-template let-thumb pTemplate="item"> -->
+          <!-- <div class="ui grid ui-grid-responsive"> -->
+            <!-- <a class="nav-link active" (click)="getComic(thumb)"> <img [src]="thumb"> </a>  -->
+          <!-- </div> -->
+        <!-- </ng-template> -->
+      <!-- </p-carousel> -->
+    </div>
+    <div class="card-body">
+      <!-- <p-carousel headerText="Complete Bedlam!" numVisible=1 circular="true" pageLinks="50" [value]="imageUrls"> -->
+        
+        <!-- <ng-template let-image pTemplate="item"> -->
+            <!-- <div class="ui grid ui-grid-responsive"> -->
+              <!-- <p>{{image}}</p> -->
+            <!-- <img [src]="image" width="100%"> -->
+            <!-- </div> -->
+        <!-- </ng-template> -->
+        
+      <!-- </p-carousel> -->
+      <carousel [interval]="0">
+        <slide *ngFor="let image of imageUrls">
+            <img [src]="image" style="display: block; width: 100%">    
+        </slide>
+      </carousel>
+    </div>
+</div>
